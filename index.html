@@ -110,27 +110,20 @@
             <h3>Looking for the perfect dog? Try contacting us!</h3>
             <p>Your unconditional loving partner is waiting!</p>
             <form id="contactForm">
-                <input
-                type="name"
-                id="name"
-                placeholder="Your Name"
-            >
-                <input
-                type="email"
-                id="email"
-                placeholder="Your Email"
-            >
-                <input
-                type="tel"
-                id="phone"
-                placeholder="Your Phone"
-            >
-                <input
-                type="choice"
-                id="choice"
-                placeholder="Dog Choice"
-            >
-                <textarea
+                <div class="modal">
+            <label for="name">Name:</label>
+  <input type="text" id="name" name="name" />
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" />
+
+  <label for="phone">Phone:</label>
+  <input type="tel" id="phone" name="phone" />
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message"></textarea>
+
+  <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
