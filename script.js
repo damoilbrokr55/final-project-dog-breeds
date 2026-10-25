@@ -23,6 +23,7 @@ const resetButton = document.getElementById("resetFilters");
         });
     }
 
+
     search.addEventListener("input", filterDogs);
     filter.addEventListener("change", filterDogs);
 
@@ -31,6 +32,13 @@ const resetButton = document.getElementById("resetFilters");
         filter.value = "all";
         filterDogs();
     });
+
+    const response = await fetch(
+        "https://dog.ceo/api/breed/dogs/images/random"
+    );
+
+    const data = await response.json();
+        console.log(data);
 
 
 
