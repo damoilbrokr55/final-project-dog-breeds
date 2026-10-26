@@ -32,13 +32,16 @@ const resetButton = document.getElementById("resetFilters");
         filter.value = "all";
         filterDogs();
     });
-
-    const response = await fetch(
-        "https://dog.ceo/api/breed/dogs/images/random"
-    );
-
-    const data = await response.json();
-        console.log(data);
+        async function  getDog(breed) {
+         const response = await fetch(`https://dog.ceo/api/breed/${breed}/images/random)`);
+    
+        const data = await response.json();
+        console.log(data.message) }
+        const searchBtn = document.getElementById("searchBtn");
+        searchBtn.addEventListener("click", () => {
+        const breed = document.querySelector("#breedSearch").value.trim().toLowerCase();
+        getDog(breed);
+    });
 
 
 
