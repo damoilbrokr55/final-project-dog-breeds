@@ -33,13 +33,14 @@ const resetButton = document.getElementById("resetFilters");
         filterDogs();
     });
         async function  getDog(breed) {
-         const response = await fetch(`https://dog.ceo/api/breed/${breed}/images/random)`);
+         const response = await fetch(`https://dog.ceo/api/breed/${breed}/images/random/3`);
     
         const data = await response.json();
         console.log(data.message) }
         const searchBtn = document.getElementById("searchBtn");
         searchBtn.addEventListener("click", () => {
         const breed = document.querySelector("#breedSearch").value.trim().toLowerCase();
+            console.log("Search button clicked");
         getDog(breed);
     });
 
