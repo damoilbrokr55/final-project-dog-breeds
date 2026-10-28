@@ -32,17 +32,56 @@ const resetButton = document.getElementById("resetFilters");
         filter.value = "all";
         filterDogs();
     });
+        const breedNames = {
+            "german shepherd": "germanshepherd",
+            "great dane": "dane/great",
+            "toy poodle": "poodle/toy",
+            "english bulldog": "bulldog/english",
+            "cocker spaniel": "spaniel/cocker"
+        };
         async function  getDog(breed) {
-         const response = await fetch(`https://dog.ceo/api/breed/${breed}/images/random/3`);
-    
-        const data = await response.json();
-        console.log(data.message) }
-        const searchBtn = document.getElementById("searchBtn");
-        searchBtn.addEventListener("click", () => {
-        const breed = document.querySelector("#breedSearch").value.trim().toLowerCase();
-            console.log("Search button clicked");
+         const apiBreed = breedNames[breed] || breed;
+         
+         const response = await fetch(
+            `https://dog.ceo/api/breed/${apiBreed}/images/random/3`
+         );
+        
+         const data = await response.json();
+            
+         const results = document.getElementById("dogResults");
+        results.innerHTML = "";
+         
+         if (data.status !== "success") {
+         results.textContent = "Breed not found. Please try another breed.";
+        return;
+    }
+     
+        data.message.forEach((url) => {
+        const img = document.createElement("img");
+        img.src = url;
+        img.alt = breed;
+        results.appendChild(img);
         getDog(breed);
     });
+}
+    
+    const searchBtn = document.getElementById("searchBtn");
+
+    searchBtn.addEventListener("click", () => {
+        const breed = document
+        .querySelector("#breedSearch")
+        .value.trim().toLowerCase();
+            
+        console.log("Search button clicked");
+        getDog(breed);
+    });
+        
+        
+        
+        
+            
+    
+     
 
 
 
