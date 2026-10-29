@@ -33,11 +33,12 @@ const resetButton = document.getElementById("resetFilters");
         filterDogs();
     });
         const breedNames = {
-            "german shepherd": "germanshepherd",
+            "german shepherd": "german/shepherd",
             "great dane": "dane/great",
             "toy poodle": "poodle/toy",
             "english bulldog": "bulldog/english",
-            "cocker spaniel": "spaniel/cocker"
+            "cocker spaniel": "spaniel/cocker",
+            "labrador retriever": "labrador",
         };
         async function  getDog(breed) {
          const apiBreed = breedNames[breed] || breed;
