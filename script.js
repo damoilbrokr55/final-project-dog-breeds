@@ -62,7 +62,7 @@ const resetButton = document.getElementById("resetFilters");
         img.src = url;
         img.alt = breed;
         results.appendChild(img);
-        getDog(breed);
+        
     });
 }
     
@@ -75,6 +75,25 @@ const resetButton = document.getElementById("resetFilters");
             
         console.log("Search button clicked");
         getDog(breed);
+    });
+
+    document.addEventListener("click", function (event) {
+        const button = event.target.closest(".adopt-btn");
+
+        if (!button) return;
+
+        event.preventDefault();
+
+    const breed = button.dataset.breed;
+    const breedInput = document.getElementById("dogBreed");
+
+        if (breedInput) {
+            breedInput.value = breed || "";
+        }
+
+        document.getElementById("contact").scrollIntoView({
+            behavior: "smooth"
+        });
     });
         
         

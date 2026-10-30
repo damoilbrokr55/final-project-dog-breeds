@@ -24,6 +24,19 @@
     margin-bottom: 8px;
 }
 
+#contact {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+#contact h3,
+#contact p {
+    text-align: center;
+}
+
 .contact-btn {
     display: inline-block;
     background-color: #6c63ff;
@@ -37,4 +50,98 @@
 .contact-btn:hover {
     background-color: #5148cc;
     cursor: pointer;
+}
+
+.adoption-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.adoption-form input,
+.adoption-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.adoption-form button {
+    padding: 12px;
+    background-color: #6255ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.adoption-form button:hover {
+    background-color: #5148cc
+}
+
+.adopt-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 15px;
+    background-color: #6255ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.adopt-btn:hover {
+    background-color: #5148cc;
+}
+
+/*  HEADER  */
+
+header {
+    background-color: #f5f5f5;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+header h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+/*  NAVIGATION  */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* PAGE HEADINGS  */
+
+h1, h2 {
+    text-align: center;
+}
+
+/*  SEARCH AND FILTER CONTROLS  */
+
+#breedSearch,
+#priceFilter {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+
+/*  DOG CARDS  */
+
+.dog__card {
+    transition: transform 0.3s ease;
+}
+
+.dog__card:hover {
+    transform: translateY(-5px);
 }

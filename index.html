@@ -43,20 +43,29 @@
                         <h3>Corgi</h3>
                         <p class="dog__price">Starting at $350</p>
                         <p>Meet the adorable and playful Corgi</p>
-                </div>
+                            <a href="#contact" class="adopt-btn" data-breed="Corgi">
+                                Inquire about adoption
+                            </a>
+                    </div>
                 <div class="dog__card" data-price="1000">
                     <img src="./assets-1/picture-pomeranian.jpg" alt="Pomeranian">
                         <h3>Pomeranian</h3>
                         <p class="dog__price">Starting at $1000</p>      
                         <p>Heres your fluffy little Pomeranian present</p>
-                </div>
+                            <a href="#contact" class="adopt-btn" data-breed="Pomeranian">
+                                Inquire about adoption
+                            </a>
+                    </div>
                 <div class="dog__card" data-price="1000">
-                    <img src="./assets-1/picture-toy-poodle.jpg" alt="Toy Poodle">
+                    <img src="./assets-1/picture-toy-poodle.jpg" alt="Toy-Poodle">
                         <h3>Toy Poodle</h3>
                         <p class="dog__price">Starting at $1000</p>
                         <p>The cuddly Toy Poodle is a real favorite</p>
-                    </div>
-                </div> 
+                            <a href="#contact" class="adopt-btn" data-breed="Toy-poodle">
+                                Inquire about adoption
+                            </a>
+                        </div>
+                    </div> 
             </section>
         <section class="medium-dogs">
             <h3>Medium Dogs</h3>
@@ -66,20 +75,29 @@
                         <h3>English Bulldog</h3>
                         <p class="dog__price">Starting at $450</p>
                         <p>English Bulldogs are the loyal guardians of their families</p>
-                    </div>
-                <div class="dog__card" data-price="1500">
+                            <a href="#contact" class="adopt-btn" data-breed="English-Bulldog">
+                                Inquire about adoption
+                            </a>
+                        </div>
+                    <div class="dog__card" data-price="1500">
                     <img src="./assets-1/picture-cocker-spaniel.jpg" alt="Cocker Spaniel">
                         <h3>Cocker Spaniel</h3>
                         <p class="dog__price">Starting at $1500</p>
                         <p>Cocker Spaniels will warm your heart with their joy</p>
-                    </div>
+                            <a href="#contact" class="adopt-btn" data-breed="Cocker-Spaniel">
+                                Inquire about adoption
+                            </a>
+                        </div>
                 <div class="dog__card" data-price="2000">
                     <img src="./assets-1/picture-collie.jpg" alt="Collie">
                         <h3>Collie</h3>
                         <p class="dog__price">Starting at $2000</p>
                         <p>The sweet and loyal Collie is an American favorite for kids</p>
-                    </div>
-                </div> 
+                            <a href="#contact" class="adopt-btn" data-breed="Collie">
+                                Inquire about adoption
+                            </a>
+                        </div>
+                    </div> 
             </section>
             <section class="large-dogs">
                 <h3>Large Dogs</h3>
@@ -89,28 +107,48 @@
                         <h3>German Shepherd</h3>
                         <p class="dog__price">Starting at $1300</p>
                          <p>The mighty German Shepherd is highly intelligent and good natured</p>
-                    </div>
+                            <a href="#contact" class="adopt-btn" data-breed="German-Shepherd">
+                                Inquire about adoption
+                            </a>
+                        </div>
                 <div class="dog__card" data-price="1800">
-                    <img src="./assets-1/picture-labrador.jpg" alt="Labrador">
-                        <h3>Labrador</h3>
+                    <img src="./assets-1/picture-labrador.jpg" alt="labrador">
+                        <h3>labrador</h3>
                         <p class="dog__price">Starting at $1800</p>
                         <p>Labs have been chosen by many as the most popular dogs to own</p>
-                    </div>
+                            <a href="#contact" class="adopt-btn" data-breed="Labrador">
+                                Inquire about adoption
+                            </a>
+                        </div>
                 <div class="dog__card" data-price="1500">
                     <img src="./assets-1/picture-great-dane.jpg" alt="Great Dane">
                         <h3>Great Dane</h3>
                         <p class="dog__price">Starting at $1500</p>
                         <p>The good natured Great Dane is a huge hit with the kids and adults alike</p>
+                            <a href="#contact" class="adopt-btn" data-breed="Great-Dane">
+                                Inquire about adoption
+                            </a>
+                        </div>
                     </div>
-                    </div>
+                    <section id="adoption">
+                        <h2>Adopt your lifelong companion</h2>
+                        <h2>Why Adoption is a WIN-WIN for both dog and owner</h2>
+                    </section>
             </section>
             </div>
         </section>
         <section id="contact">
-            <h3>Looking for the perfect dog? Try contacting us!</h3>
+            <h3>Looking for the perfect dog? Questions about adopting one? Try contacting us!</h3>
             <p>Your unconditional loving partner is waiting!</p>
             <form id="contactForm" action="https://formspree.io/f/xaeeqwvq" method="POST">
-                <div class="modal">
+                <div class="modal adoption-form">
+                    <label for="dogBreed">Interested In:</label>
+                    <input
+                    type="text"
+                    id="dogBreed"
+                    name="dogBreed"
+                    readonly
+                    />
             <label for="name">Name:</label>
   <input type="text" id="name" name="name" />
 
@@ -122,6 +160,7 @@
 
   <label for="message">Message:</label>
   <textarea id="message" name="message"></textarea>
+  <button type="submit">Send Inquiry</button>
 
                 </div>
             </form>
