@@ -1,21 +1,33 @@
 .dog__card {
-    width: 300px;
+    max-width: 100%;
+    flex: 0 1 340px;
+    box-sizing: border-box;
     padding: 20px;
+    display: flex;
+    flex-direction:column;
     border-radius: 12px;
-    background-color: #f5f5f5;
+    border: 1px solid #ddd;
     text-align: center;
+    min-width: 0;
+    
 }
 
 .dog__card img {
+
+    height: 220px;
+    object-fit: cover;
     width: 100%;
     border-radius: 8px;
 }
 
 .dog__container {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 24px;
 }
 
 #breedSearch,
@@ -52,12 +64,33 @@
     cursor: pointer;
 }
 
+.adoption__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.adoption__card {
+    padding: 24px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
 .adoption-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
     max-width: 450px;
     margin: 0 auto;
+}
+
+.adoption__intro {
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 1.6;
 }
 
 .adoption-form input,
@@ -82,14 +115,9 @@
 }
 
 .adopt-btn {
-    display: inline-block;
-    padding: 12px 20px;
-    margin-top: 15px;
-    background-color: #6255ff;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
+    display: block;
+    padding: 12px;
+    margin-top: auto;
 }
 
 .adopt-btn:hover {
@@ -145,3 +173,11 @@ h1, h2 {
 .dog__card:hover {
     transform: translateY(-5px);
 }
+
+@media (max-width: 768px) {
+    .adoption__container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
