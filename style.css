@@ -1,3 +1,35 @@
+.breeds__intro,
+.breeds__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+    gap: 16px;
+}
+
+.breeds__intro > *,
+.breeds__controls > * {
+    flex: 1;
+
+}
+
+.breeds__intro h2,
+#priceFilter {
+    text-align: center;
+}
+
+#resetFilters {
+    flex: 0;
+    margin-left: auto;
+}
+
+.breeds__search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
 .dog__card {
     max-width: 100%;
     flex: 0 1 340px;
@@ -32,7 +64,6 @@
 
 #breedSearch,
 #priceFilter {
-    display: block;
     margin-bottom: 8px;
 }
 
@@ -142,17 +173,17 @@ header h1 {
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
 
+h1, h2 {
+    text-align: center;
+
 
 /* PAGE HEADINGS  */
 
-h1, h2 {
-    text-align: center;
-}
 
 /*  SEARCH AND FILTER CONTROLS  */
 

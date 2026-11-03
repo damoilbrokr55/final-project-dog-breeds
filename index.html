@@ -9,31 +9,38 @@
          <body>
          <header>
          <nav>
+            <h1>Find Your Perfect Dog</h1>
             <h2>DOGS 4 US</h2>
-            <a href="#breeds">Find Your Dog</a>
-            <a href="#contact" class="contact-btn">Contact</a>
+            <div class="nav__links">
+                <a href="#breeds">Find Your Dog</a>
+                <a href="#contact" class="contact-btn">Contact</a>
+            </div>
         </nav>
     </header>
     <main>
         <section id="home">
-            <h1>Find Your Perfect Dog</h1>
-            <p>Explore different dog breeds and find the right companion for you!</p>
-        </section>
+            </section>
         <section id="breeds">
-            <h2>Explore Dog Breeds</h2>
-            <p>Compare small medium and large dogs</p>
-                <input type="text" id="breedSearch"
-                placeholder="Search for a dog breed...">
-                <button type="button" id="searchBtn">Search</button>
-            
-        <select id="priceFilter">
+            <div class="breeds__intro">
+                <p>Explore different dog breeds and find the right companion for you!</p>
+                <h2>Explore Dog Breeds</h2>
+                <span></span>
+            </div>
+            <div class="breeds__controls">
+                <div class="breeds__search">
+                    <p>Compare small medium and large dogs</p>
+                    <input type="text id=breedSearch" placeholder="Search for a dog breed...">
+                    <button type="button" id="searchBtn">Search</button>
+                </div>
+                <select id="priceFilter">
             <option value="all">All prices</option>
             <option value="350-650">350 to 650</option>
             <option value="651-3000">651 to 3000</option>
             <option value="3001-10000">3001 to 10000</option>
         </select>
+            <button id="resetFilter">Reset Filters</button>
+            </div>
          <div id="dogResults"></div>
-        <button id="resetFilters">Reset Filters</button>
             <div class="dog-categories">
                 <section class="small-dogs">
                     <h3>Small Dogs</h3>
@@ -174,9 +181,29 @@
                                 <li>Always make sure that your outdoor enclosure is 100% secure</li>
                             </ul>
                         </div>
+                        <div class="adoption__card">
+                            <h3>The Purpose of Adoption</h3>
+                            <ul>
+                                <li>Helps Eliminate the overabundance of animals
+                                    that are Abandonded Neglected or Abused</li>
+                                <li>Gives those animals a loving caring home that
+                                    benefits both the owner and the adopted animal</li>
+                            </ul>
+                        </div>
+                            <div class="adoption__card">
+                                <h3>Why Adopting Matters</h3>
+                            <ul>
+                                <li>There are over 70 million neglected animals that
+                                    live in the United States at any one time</li>
+                                <li>Adoption is the singular most important way to control
+                                    the excess of abandoned animals in our country</li>
+                                <li>Adoption also keeps our animal shelters busy sending
+                                    out more for adoption and receiving more new animals</li>
+                            </ul>
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
             <section id="contact">
             <h3>Looking for the perfect dog? Questions about adopting one? Try contacting us!</h3>
             <p>Your unconditional loving partner is waiting!</p>
