@@ -1,7 +1,7 @@
 const filter = document.getElementById("priceFilter");
 const search = document.getElementById("breedSearch");
 const cards = document.querySelectorAll(".dog__card");
-const resetButton = document.getElementById("resetFilters");
+const resetButton = document.getElementById("resetFilter");
     function filterDogs() {
         const searchTerm = search.value.toLowerCase();
         const selectedPrice = filter.value;
@@ -28,11 +28,14 @@ const resetButton = document.getElementById("resetFilters");
     filter.addEventListener("change", filterDogs);
 
     resetButton.addEventListener("click", () => {
+        document.getElementById("dogResults").innerHTML = "";
+
         search.value = "";
         filter.value = "all";
         filterDogs();
     });
         const breedNames = {
+            "corgi" : "pembroke",
             "german shepherd": "german/shepherd",
             "great dane": "dane/great",
             "toy poodle": "poodle/toy",
@@ -40,6 +43,7 @@ const resetButton = document.getElementById("resetFilters");
             "cocker spaniel": "spaniel/cocker",
             "labrador retriever": "labrador",
         };
+        
         async function  getDog(breed) {
          const apiBreed = breedNames[breed] || breed;
          
@@ -75,6 +79,8 @@ const resetButton = document.getElementById("resetFilters");
             
         console.log("Search button clicked");
         getDog(breed);
+        if (!breed) return;
+
     });
 
     document.addEventListener("click", function (event) {
