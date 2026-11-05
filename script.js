@@ -78,9 +78,8 @@ const resetButton = document.getElementById("resetFilter");
         .value.trim().toLowerCase();
             
         console.log("Search button clicked");
-        getDog(breed);
         if (!breed) return;
-
+        getDog(breed);
     });
 
     document.addEventListener("click", function (event) {
